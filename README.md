@@ -19,7 +19,7 @@ This service will be responsible to manage the uploads to a object store service
 
 ### Thumbnail Service
 
-This service is responsible to create a thumbnail for every uploaded image, decreasing the resolution and applying a watermark.
+This service is responsible to create and manage a thumbnail for every uploaded image, decreasing the resolution, applying a watermark and serving the link to that thumbnail.
 
 ### Jobs Service
 
@@ -27,7 +27,7 @@ This service will implement scheduled jobs to do operations like delete expired 
 
 ### Checkout Service
 
-This service is responsible to manage the payments status and comunication with our payment gateway. When a succesfull payment 
+This service is responsible to manage the payments status and comunication with our payment gateway. The payment status is sended to the messaging system to be processed by the download service.
 
 ### Download Service
 
@@ -49,7 +49,7 @@ The PostgreSQL relational database will be the best choice for this project. Bec
 
 ## Schema Design
 
-TODO
+![Schema Diagram](database.png)
 
 ## Scalability & Data Partitioning
 
